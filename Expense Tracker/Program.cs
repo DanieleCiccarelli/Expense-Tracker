@@ -9,7 +9,7 @@ builder.Services.AddControllersWithViews();
 //DI
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("DevConnection")));
-
+builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
