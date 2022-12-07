@@ -23,6 +23,16 @@ body {
     font-size: x-large;
 }
 
+/*Grid*/
+.e-grid {
+    border:0;
+    border-radius: 5px;
+}
+
+.e-grid .e-gridcontent, .e-grid .e-table {
+    background-color: #1a222b;
+}
+
 /*radio button group*/
 
 .e-btn-group.custom-rbt-group {
@@ -44,4 +54,10 @@ body {
     background-color: #fff;
     color: #212b36;
     border: 1px solid #fff;
+}
+
+/*Widget*/
+.widget {
+    border-radius: 1rem;
+    background-color:#1a222b;
 }
