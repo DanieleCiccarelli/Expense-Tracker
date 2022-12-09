@@ -21,7 +21,7 @@ namespace Expense_Tracker.Controllers
         // GET: Category
         public async Task<IActionResult> Index()
         {
-              return View(await _context.categories.ToListAsync());
+              return View(await _context.Categories.ToListAsync());
         }
 
         // GET: Category/AddOrEdit
@@ -30,7 +30,7 @@ namespace Expense_Tracker.Controllers
             if (id == 0)
                 return View(new Category());
             else
-                return View(_context.categories.Find(id));
+                return View(_context.Categories.Find(id));
         }
 
         // POST: Category/AddOrEdit
@@ -61,10 +61,10 @@ namespace Expense_Tracker.Controllers
             {
                 return Problem("Entity set 'ApplicationDbContext.categories'  is null.");
             }
-            var category = await _context.categories.FindAsync(id);
+            var category = await _context.Categories.FindAsync(id);
             if (category != null)
             {
-                _context.categories.Remove(category);
+                _context.Categories.Remove(category);
             }
             
             await _context.SaveChangesAsync();

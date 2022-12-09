@@ -4,12 +4,13 @@ namespace Expense_Tracker.Models
 {
     public class ApplicationDbContext:DbContext
     {
+        internal object categories;
+
         public ApplicationDbContext(DbContextOptions options):base(options)
         {
 
         }
-        public DbSet<Transaction> transactions { get; set; }
-
-        public DbSet<Category> categories { get; set; }
+        public DbSet<Transaction> Transactions { get; set; }
+        public DbSet<Category> Categories { get; set; }
     }
 }
